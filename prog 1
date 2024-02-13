@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int findGCD(int a, int b);
+if (b==0); {
+    return a;
+} else {
+    return findGCD(b, a%b);
+}
+}
+
+int main()
+{ 
+    int a, b;
+    std::cout << "Введите числитель а:";
+    std::cin>> a;
+    
+    std::cout<< "Введите знаминатель b:";
+    std::cin>> b;
+    
+    int gcd = findGCD (a, b);
+    
+    int p = a/gcd;
+    int q = b/gcd;
+    
+    std::cout<< "Сокращенная дробь:" << p << "/" << q << std::endl;
+    
+    
+    
+
+    return 0;
+}
