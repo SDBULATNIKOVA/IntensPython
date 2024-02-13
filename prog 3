@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+bool isPalindrome(int number) {
+    std::string numStr = std::to_string(number);
+    int left = 0;
+    int right = numStr.length() - 1;
+
+    while (left < right) {
+        if (numStr[left] != numStr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Введите два натуральных числа: ";
+    std::cin >> num1 >> num2;
+
+
+    if (isPalindrome(num1) || isPalindrome(num2)) {
+        std::cout << "Хотя бы одно из чисел является палиндромом." << std::endl;
+    } else {
+        std::cout << "Ни одно из чисел не является палиндромом." << std::endl;
+    }
