@@ -1,0 +1,19 @@
+import random
+size=5
+
+array1 = [random.randint(1,100) for _ in
+range(size)]
+
+array2 = [random.randint(`1, 100) for _ in
+range(size)]
+
+print ("Массив 1:" , array1 )
+print ("Массив 2:" , array2 )
+
+max_array= []
+
+for i in range (size):
+    max_array.append(max(array1[i])) , array2[i]))
+    
+    print("Третий массив (максимумы):" , max_array)
+
